@@ -76,7 +76,7 @@ class UMineViewController: UBaseViewController {
         // 读取本地缓存
         let loginType: Bool = UserDefaults.standard.bool(forKey: "loginType")
         if loginType == false {
-            self.present(ULoginViewController.getVC(), animated: true) { }
+            self.present(UNavigationController(rootViewController: ULoginViewController.getVC()), animated: true) { }
         } else {
             self.showTips("已经登录")
         }

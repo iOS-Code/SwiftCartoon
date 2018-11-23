@@ -71,7 +71,7 @@ class UBoutiqueListViewController: UBaseViewController {
         // 读取本地缓存
         let loginType: Bool = UserDefaults.standard.bool(forKey: "loginType")
         if loginType {
-            self.present(ULoginViewController.getVC(), animated: true) { }
+            self.present(UNavigationController(rootViewController: ULoginViewController.getVC()), animated: true) { }
         }
     }
     

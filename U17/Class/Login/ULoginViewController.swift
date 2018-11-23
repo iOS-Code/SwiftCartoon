@@ -14,9 +14,9 @@ class ULoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var button: UIButton!
     
-    @objc class func getVC() -> UINavigationController {
+    @objc class func getVC() -> ULoginViewController {
         let storyboard: UIStoryboard = UIStoryboard.init(name: "ULogin", bundle: nil)
-        let vc:UINavigationController = storyboard.instantiateViewController(withIdentifier: "loginNav") as! UINavigationController
+        let vc:ULoginViewController = storyboard.instantiateViewController(withIdentifier: "ULoginViewController") as! ULoginViewController
         return vc;
     }
     
