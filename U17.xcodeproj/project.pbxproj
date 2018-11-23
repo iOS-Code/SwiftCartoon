@@ -91,6 +91,8 @@
 		566B6B1F1FCFA899003E0CA7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6B151FCFA899003E0CA7 /* StringExtension.swift */; };
 		566B6B201FCFA899003E0CA7 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6B161FCFA899003E0CA7 /* DictionaryExtension.swift */; };
 		56B18A521F7E1D4D008E7175 /* UAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B18A511F7E1D4D008E7175 /* UAPI.swift */; };
+		B0AB989E21A7D8320017EE2C /* ULoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AB989D21A7D8320017EE2C /* ULoginViewController.swift */; };
+		B0AB98A021A7D83F0017EE2C /* ULogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AB989F21A7D83F0017EE2C /* ULogin.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +183,8 @@
 		566B6B161FCFA899003E0CA7 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		56B18A511F7E1D4D008E7175 /* UAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAPI.swift; sourceTree = "<group>"; };
 		85B583B6AD0CA533D314EB69 /* Pods-U17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-U17.release.xcconfig"; path = "Pods/Target Support Files/Pods-U17/Pods-U17.release.xcconfig"; sourceTree = "<group>"; };
+		B0AB989D21A7D8320017EE2C /* ULoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULoginViewController.swift; sourceTree = "<group>"; };
+		B0AB989F21A7D83F0017EE2C /* ULogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ULogin.storyboard; sourceTree = "<group>"; };
 		FFAC76C53431EC466C69E89C /* Pods_U17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_U17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -305,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				566B6AC51FCFA878003E0CA7 /* AppDelegate.swift */,
+				B0AB989C21A7D80C0017EE2C /* Login */,
 				566B6AC61FCFA878003E0CA7 /* Base */,
 				566B6ABF1FCFA878003E0CA7 /* Book */,
 				566B6AB31FCFA878003E0CA7 /* Cate */,
@@ -342,13 +347,13 @@
 		566B6A8D1FCFA878003E0CA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				566B6A8E1FCFA878003E0CA7 /* USubscibeListViewController.swift */,
-				566B6A8F1FCFA878003E0CA7 /* UVIPListViewController.swift */,
-				566B6A901FCFA878003E0CA7 /* UUpdateListViewController.swift */,
-				566B6A911FCFA878003E0CA7 /* UHomeViewController.swift */,
-				566B6A921FCFA878003E0CA7 /* USpecialViewController.swift */,
 				566B6A931FCFA878003E0CA7 /* UBoutiqueListViewController.swift */,
+				566B6A911FCFA878003E0CA7 /* UHomeViewController.swift */,
 				566B6A941FCFA878003E0CA7 /* URankListViewController.swift */,
+				566B6A921FCFA878003E0CA7 /* USpecialViewController.swift */,
+				566B6A8E1FCFA878003E0CA7 /* USubscibeListViewController.swift */,
+				566B6A901FCFA878003E0CA7 /* UUpdateListViewController.swift */,
+				566B6A8F1FCFA878003E0CA7 /* UVIPListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -554,6 +559,15 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		B0AB989C21A7D80C0017EE2C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B0AB989D21A7D8320017EE2C /* ULoginViewController.swift */,
+				B0AB989F21A7D83F0017EE2C /* ULogin.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -619,6 +633,7 @@
 			files = (
 				5668D36F1F7E146B00D24C39 /* LaunchScreen.storyboard in Resources */,
 				5668D36C1F7E146B00D24C39 /* Assets.xcassets in Resources */,
+				B0AB98A021A7D83F0017EE2C /* ULogin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +735,7 @@
 				566B6B051FCFA878003E0CA7 /* UBaseTableViewCell.swift in Sources */,
 				566B6AFC1FCFA878003E0CA7 /* USettingViewController.swift in Sources */,
 				566B6A821FCFA686003E0CA7 /* UNoticeBar.swift in Sources */,
+				B0AB989E21A7D8320017EE2C /* ULoginViewController.swift in Sources */,
 				566B6ADB1FCFA878003E0CA7 /* UUpdateListViewController.swift in Sources */,
 				566B6B021FCFA878003E0CA7 /* AppDelegate.swift in Sources */,
 				566B6ADC1FCFA878003E0CA7 /* UHomeViewController.swift in Sources */,

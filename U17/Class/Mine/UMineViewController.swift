@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class UMineViewController: UBaseViewController {
 
     private lazy var myArray: Array = {
-        return [[["icon":"mine_vip", "title": "我的VIP"],
+        return [[["icon":"mine_vip", "title": "登录"],
                  ["icon":"mine_coin", "title": "充值妖气币"]],
             
                 [["icon":"mine_accout", "title": "消费记录"],
@@ -26,7 +27,7 @@ class UMineViewController: UBaseViewController {
                  ["icon":"mine_mail", "title": "我要反馈"],
                  ["icon":"mine_judge", "title": "给我们评分"],
                  ["icon":"mine_author", "title": "成为作者"],
-                 ["icon":"mine_setting", "title": "设置"]]]
+                 ["icon":"mine_setting", "title": "退出登录"]]]
     }()
     
     private lazy var head: UMineHead = {
@@ -69,6 +70,35 @@ class UMineViewController: UBaseViewController {
         super.configNavigationBar()
         navigationController?.barStyle(.clear)
         tableView.contentOffset = CGPoint(x: 0, y: -tableView.parallaxHeader.height)
+    }
+    
+    private func checkLoginLocalData() -> Void {
+        // 读取本地缓存
+        let loginType: Bool = UserDefaults.standard.bool(forKey: "loginType")
+        if loginType == false {
+            self.present(ULoginViewController.getVC(), animated: true) { }
+        } else {
+            self.showTips("已经登录")
+        }
+    }
+    
+    private func checkLogoutLocalData() -> Void {
+        // 读取本地缓存
+        let loginType: Bool = UserDefaults.standard.bool(forKey: "loginType")
+        if loginType == true {
+            UserDefaults.standard.set(false, forKey: "loginType")
+            self.showTips("退出成功")
+        } else {
+            self.showTips("尚未登录")
+        }
+    }
+    
+    private func showTips(_ name : String) {
+        let tips:MBProgressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
+        tips.mode = MBProgressHUDMode.text
+        tips.label.text = name
+        tips.removeFromSuperViewOnHide = true
+        tips.hide(animated: true, afterDelay: 3)
     }
 }
 
@@ -114,6 +144,14 @@ extension UMineViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.row == 0 {
+            self.checkLoginLocalData()
+        }
+        
+        if indexPath.row == self.myArray.count {
+            self.checkLogoutLocalData()
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

@@ -59,12 +59,20 @@ class UBoutiqueListViewController: UBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        self.checkLocalData()
         loadData(false)
     }
     
     @objc private func changeSex() {
         loadData(true)
+    }
+    
+    private func checkLocalData() -> Void {
+        // 读取本地缓存
+        let loginType: Bool = UserDefaults.standard.bool(forKey: "loginType")
+        if loginType {
+            self.present(ULoginViewController.getVC(), animated: true) { }
+        }
     }
     
     private func didSelectBanner(index: NSInteger) {

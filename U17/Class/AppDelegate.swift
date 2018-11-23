@@ -21,19 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var orientation: UIInterfaceOrientationMask = .portrait
     
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         configBase()
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         window?.rootViewController = UTabBarController()
         window?.makeKeyAndVisible()
-        //MARK: 修正齐刘海
-//        UHairPowder.instance.spread()
-        
         return true
     }
     
