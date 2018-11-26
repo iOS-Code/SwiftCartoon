@@ -333,13 +333,13 @@
 		566B6A851FCFA878003E0CA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				566B6A8B1FCFA878003E0CA7 /* UBoardCCell.swift */,
+				566B6A891FCFA878003E0CA7 /* UComicCCell.swift */,
+				566B6A881FCFA878003E0CA7 /* UComicCFoot.swift */,
 				566B6A861FCFA878003E0CA7 /* UComicCHead.swift */,
 				566B6A871FCFA878003E0CA7 /* URankTCell.swift */,
-				566B6A881FCFA878003E0CA7 /* UComicCFoot.swift */,
-				566B6A891FCFA878003E0CA7 /* UComicCCell.swift */,
-				566B6A8A1FCFA878003E0CA7 /* UUpdateTCell.swift */,
-				566B6A8B1FCFA878003E0CA7 /* UBoardCCell.swift */,
 				566B6A8C1FCFA878003E0CA7 /* USpecialTCell.swift */,
+				566B6A8A1FCFA878003E0CA7 /* UUpdateTCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,13 +347,13 @@
 		566B6A8D1FCFA878003E0CA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				566B6A931FCFA878003E0CA7 /* UBoutiqueListViewController.swift */,
 				566B6A911FCFA878003E0CA7 /* UHomeViewController.swift */,
+				566B6A931FCFA878003E0CA7 /* UBoutiqueListViewController.swift */,
+				566B6A8F1FCFA878003E0CA7 /* UVIPListViewController.swift */,
+				566B6A8E1FCFA878003E0CA7 /* USubscibeListViewController.swift */,
 				566B6A941FCFA878003E0CA7 /* URankListViewController.swift */,
 				566B6A921FCFA878003E0CA7 /* USpecialViewController.swift */,
-				566B6A8E1FCFA878003E0CA7 /* USubscibeListViewController.swift */,
 				566B6A901FCFA878003E0CA7 /* UUpdateListViewController.swift */,
-				566B6A8F1FCFA878003E0CA7 /* UVIPListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -388,19 +388,19 @@
 		566B6A9D1FCFA878003E0CA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				566B6A9E1FCFA878003E0CA7 /* UOtherWorksCCell.swift */,
+				566B6AA31FCFA878003E0CA7 /* UChapterCCell.swift */,
 				566B6A9F1FCFA878003E0CA7 /* UChapterCHead.swift */,
 				566B6AA01FCFA878003E0CA7 /* UComicHead.swift */,
-				566B6AA11FCFA878003E0CA7 /* UTicketTCell.swift */,
-				566B6AA21FCFA878003E0CA7 /* UReadCCell.swift */,
-				566B6AA31FCFA878003E0CA7 /* UChapterCCell.swift */,
-				566B6AA41FCFA878003E0CA7 /* UCommentTCell.swift */,
-				566B6AA51FCFA878003E0CA7 /* UReadTopBar.swift */,
-				566B6AA61FCFA878003E0CA7 /* UOtherWorksTCell.swift */,
-				566B6AA71FCFA878003E0CA7 /* UDescriptionTCell.swift */,
 				566B6AA81FCFA878003E0CA7 /* UComicTCell.swift */,
-				566B6AA91FCFA878003E0CA7 /* UReadBottomBar.swift */,
+				566B6AA41FCFA878003E0CA7 /* UCommentTCell.swift */,
+				566B6AA71FCFA878003E0CA7 /* UDescriptionTCell.swift */,
 				566B6AAA1FCFA878003E0CA7 /* UGuessLikeTCell.swift */,
+				566B6A9E1FCFA878003E0CA7 /* UOtherWorksCCell.swift */,
+				566B6AA61FCFA878003E0CA7 /* UOtherWorksTCell.swift */,
+				566B6AA91FCFA878003E0CA7 /* UReadBottomBar.swift */,
+				566B6AA21FCFA878003E0CA7 /* UReadCCell.swift */,
+				566B6AA51FCFA878003E0CA7 /* UReadTopBar.swift */,
+				566B6AA11FCFA878003E0CA7 /* UTicketTCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,13 +408,13 @@
 		566B6AAB1FCFA878003E0CA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				566B6AB01FCFA878003E0CA7 /* UComicListViewController.swift */,
 				566B6AAC1FCFA878003E0CA7 /* UComicViewController.swift */,
 				566B6AAD1FCFA878003E0CA7 /* UDetailViewController.swift */,
-				566B6AAE1FCFA878003E0CA7 /* UOtherWorksViewController.swift */,
 				566B6AAF1FCFA878003E0CA7 /* UChapterViewController.swift */,
-				566B6AB01FCFA878003E0CA7 /* UComicListViewController.swift */,
-				566B6AB11FCFA878003E0CA7 /* UReadViewController.swift */,
 				566B6AB21FCFA878003E0CA7 /* UCommentViewController.swift */,
+				566B6AAE1FCFA878003E0CA7 /* UOtherWorksViewController.swift */,
+				566B6AB11FCFA878003E0CA7 /* UReadViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -440,8 +440,8 @@
 		566B6AB91FCFA878003E0CA7 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				566B6ABD1FCFA878003E0CA7 /* USettingViewController.swift */,
 				566B6ABE1FCFA878003E0CA7 /* UMineViewController.swift */,
+				566B6ABD1FCFA878003E0CA7 /* USettingViewController.swift */,
 				566B6ABA1FCFA878003E0CA7 /* View */,
 			);
 			path = Mine;
@@ -458,8 +458,8 @@
 		566B6ABF1FCFA878003E0CA7 /* Book */ = {
 			isa = PBXGroup;
 			children = (
-				566B6AC11FCFA878003E0CA7 /* UCollectListViewController.swift */,
 				566B6AC21FCFA878003E0CA7 /* UBookViewController.swift */,
+				566B6AC11FCFA878003E0CA7 /* UCollectListViewController.swift */,
 				566B6AC31FCFA878003E0CA7 /* UDocumentListViewController.swift */,
 				566B6AC41FCFA878003E0CA7 /* UDownloadListViewController.swift */,
 			);
@@ -478,10 +478,10 @@
 		566B6AC71FCFA878003E0CA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				566B6AC81FCFA878003E0CA7 /* UBaseTableViewHeaderFooterView.swift */,
+				566B6ACB1FCFA878003E0CA7 /* UBaseCollectionReusableView.swift */,
 				566B6AC91FCFA878003E0CA7 /* UBaseCollectionViewCell.swift */,
 				566B6ACA1FCFA878003E0CA7 /* UBaseTableViewCell.swift */,
-				566B6ACB1FCFA878003E0CA7 /* UBaseCollectionReusableView.swift */,
+				566B6AC81FCFA878003E0CA7 /* UBaseTableViewHeaderFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

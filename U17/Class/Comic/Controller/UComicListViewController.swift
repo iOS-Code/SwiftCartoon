@@ -4,7 +4,7 @@
 //
 //  Created by 岳琛 on 2018/11/8.
 //  Copyright © 2018 NJTU-Engineering. All rights reserved.
-//
+//  漫画列表页 点击漫画分类进入
 
 import UIKit
 

@@ -4,7 +4,7 @@
 //
 //  Created by 岳琛 on 2018/10/24.
 //  Copyright © 2018 NJTU-Engineering. All rights reserved.
-//
+//  顶部选择器导航栏的控制器
 
 import UIKit
 import HMSegmentedControl
