@@ -136,15 +136,15 @@ class USearchViewController: UBaseViewController {
 
     
     override func configUI() {
-        view.addSubview(historyTableView)
-        historyTableView.snp.makeConstraints { $0.edges.equalTo(self.view.usnp.edges) }
-        
-        view.addSubview(searchTableView)
-        searchTableView.snp.makeConstraints { $0.edges.equalTo(self.view.usnp.edges) }
-        
-        
-        view.addSubview(resultTableView)
-        resultTableView.snp.makeConstraints { $0.edges.equalTo(self.view.usnp.edges) }
+//        view.addSubview(historyTableView)
+//        historyTableView.snp.makeConstraints { $0.edges.equalTo(self.view.usnp.edges) }
+//        
+//        view.addSubview(searchTableView)
+//        searchTableView.snp.makeConstraints { $0.edges.equalTo(self.view.usnp.edges) }
+//
+//
+//        view.addSubview(resultTableView)
+//        resultTableView.snp.makeConstraints { $0.edges.equalTo(self.view.usnp.edges) }
     }
     
     override func configNavigationBar() {

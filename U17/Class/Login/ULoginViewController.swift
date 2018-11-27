@@ -38,15 +38,17 @@ class ULoginViewController: UIViewController {
         }
     }
     
+    @IBAction func backAction(_ sender: Any) {
+        self.dismiss(animated: true) { }
+    }
+    
     @IBAction func buttonAction(_ sender: UIButton) {
         let number1 = self.userNameTextField.text!.count
         let number2 = self.passwordTextField.text!.count
         
         if number1>0 && number2>0 {
             self.updateLocalData()
-            self.dismiss(animated: true) {
-                
-            }
+            self.dismiss(animated: true) { }
         }
     }
     

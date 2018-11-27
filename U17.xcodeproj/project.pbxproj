@@ -29,8 +29,6 @@
 		566B6AD61FCFA878003E0CA7 /* UUpdateTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6A8A1FCFA878003E0CA7 /* UUpdateTCell.swift */; };
 		566B6AD71FCFA878003E0CA7 /* UBoardCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6A8B1FCFA878003E0CA7 /* UBoardCCell.swift */; };
 		566B6AD81FCFA878003E0CA7 /* USpecialTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6A8C1FCFA878003E0CA7 /* USpecialTCell.swift */; };
-		566B6AD91FCFA878003E0CA7 /* USubscibeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6A8E1FCFA878003E0CA7 /* USubscibeListViewController.swift */; };
-		566B6ADA1FCFA878003E0CA7 /* UVIPListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6A8F1FCFA878003E0CA7 /* UVIPListViewController.swift */; };
 		566B6ADB1FCFA878003E0CA7 /* UUpdateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6A901FCFA878003E0CA7 /* UUpdateListViewController.swift */; };
 		566B6ADC1FCFA878003E0CA7 /* UHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6A911FCFA878003E0CA7 /* UHomeViewController.swift */; };
 		566B6ADD1FCFA878003E0CA7 /* USpecialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6A921FCFA878003E0CA7 /* USpecialViewController.swift */; };
@@ -66,10 +64,7 @@
 		566B6AFB1FCFA878003E0CA7 /* UMineHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6ABB1FCFA878003E0CA7 /* UMineHead.swift */; };
 		566B6AFC1FCFA878003E0CA7 /* USettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6ABD1FCFA878003E0CA7 /* USettingViewController.swift */; };
 		566B6AFD1FCFA878003E0CA7 /* UMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6ABE1FCFA878003E0CA7 /* UMineViewController.swift */; };
-		566B6AFE1FCFA878003E0CA7 /* UCollectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6AC11FCFA878003E0CA7 /* UCollectListViewController.swift */; };
-		566B6AFF1FCFA878003E0CA7 /* UBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6AC21FCFA878003E0CA7 /* UBookViewController.swift */; };
 		566B6B001FCFA878003E0CA7 /* UDocumentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6AC31FCFA878003E0CA7 /* UDocumentListViewController.swift */; };
-		566B6B011FCFA878003E0CA7 /* UDownloadListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6AC41FCFA878003E0CA7 /* UDownloadListViewController.swift */; };
 		566B6B021FCFA878003E0CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6AC51FCFA878003E0CA7 /* AppDelegate.swift */; };
 		566B6B031FCFA878003E0CA7 /* UBaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6AC81FCFA878003E0CA7 /* UBaseTableViewHeaderFooterView.swift */; };
 		566B6B041FCFA878003E0CA7 /* UBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B6AC91FCFA878003E0CA7 /* UBaseCollectionViewCell.swift */; };
@@ -120,8 +115,6 @@
 		566B6A8A1FCFA878003E0CA7 /* UUpdateTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUpdateTCell.swift; sourceTree = "<group>"; };
 		566B6A8B1FCFA878003E0CA7 /* UBoardCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBoardCCell.swift; sourceTree = "<group>"; };
 		566B6A8C1FCFA878003E0CA7 /* USpecialTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USpecialTCell.swift; sourceTree = "<group>"; };
-		566B6A8E1FCFA878003E0CA7 /* USubscibeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USubscibeListViewController.swift; sourceTree = "<group>"; };
-		566B6A8F1FCFA878003E0CA7 /* UVIPListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UVIPListViewController.swift; sourceTree = "<group>"; };
 		566B6A901FCFA878003E0CA7 /* UUpdateListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUpdateListViewController.swift; sourceTree = "<group>"; };
 		566B6A911FCFA878003E0CA7 /* UHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UHomeViewController.swift; sourceTree = "<group>"; };
 		566B6A921FCFA878003E0CA7 /* USpecialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USpecialViewController.swift; sourceTree = "<group>"; };
@@ -157,10 +150,7 @@
 		566B6ABB1FCFA878003E0CA7 /* UMineHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMineHead.swift; sourceTree = "<group>"; };
 		566B6ABD1FCFA878003E0CA7 /* USettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USettingViewController.swift; sourceTree = "<group>"; };
 		566B6ABE1FCFA878003E0CA7 /* UMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMineViewController.swift; sourceTree = "<group>"; };
-		566B6AC11FCFA878003E0CA7 /* UCollectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UCollectListViewController.swift; sourceTree = "<group>"; };
-		566B6AC21FCFA878003E0CA7 /* UBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBookViewController.swift; sourceTree = "<group>"; };
 		566B6AC31FCFA878003E0CA7 /* UDocumentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDocumentListViewController.swift; sourceTree = "<group>"; };
-		566B6AC41FCFA878003E0CA7 /* UDownloadListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDownloadListViewController.swift; sourceTree = "<group>"; };
 		566B6AC51FCFA878003E0CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		566B6AC81FCFA878003E0CA7 /* UBaseTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBaseTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
 		566B6AC91FCFA878003E0CA7 /* UBaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBaseCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -311,11 +301,11 @@
 				566B6AC51FCFA878003E0CA7 /* AppDelegate.swift */,
 				B0AB989C21A7D80C0017EE2C /* Login */,
 				566B6AC61FCFA878003E0CA7 /* Base */,
-				566B6ABF1FCFA878003E0CA7 /* Book */,
-				566B6AB31FCFA878003E0CA7 /* Cate */,
-				566B6A9C1FCFA878003E0CA7 /* Comic */,
 				566B6A841FCFA878003E0CA7 /* Home */,
+				566B6A9C1FCFA878003E0CA7 /* Comic */,
+				566B6ABF1FCFA878003E0CA7 /* Book */,
 				566B6AB91FCFA878003E0CA7 /* Mine */,
+				566B6AB31FCFA878003E0CA7 /* Cate */,
 				566B6A961FCFA878003E0CA7 /* Search */,
 			);
 			path = Class;
@@ -349,8 +339,6 @@
 			children = (
 				566B6A911FCFA878003E0CA7 /* UHomeViewController.swift */,
 				566B6A931FCFA878003E0CA7 /* UBoutiqueListViewController.swift */,
-				566B6A8F1FCFA878003E0CA7 /* UVIPListViewController.swift */,
-				566B6A8E1FCFA878003E0CA7 /* USubscibeListViewController.swift */,
 				566B6A941FCFA878003E0CA7 /* URankListViewController.swift */,
 				566B6A921FCFA878003E0CA7 /* USpecialViewController.swift */,
 				566B6A901FCFA878003E0CA7 /* UUpdateListViewController.swift */,
@@ -458,10 +446,7 @@
 		566B6ABF1FCFA878003E0CA7 /* Book */ = {
 			isa = PBXGroup;
 			children = (
-				566B6AC21FCFA878003E0CA7 /* UBookViewController.swift */,
-				566B6AC11FCFA878003E0CA7 /* UCollectListViewController.swift */,
 				566B6AC31FCFA878003E0CA7 /* UDocumentListViewController.swift */,
-				566B6AC41FCFA878003E0CA7 /* UDownloadListViewController.swift */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -719,14 +704,12 @@
 				56B18A521F7E1D4D008E7175 /* UAPI.swift in Sources */,
 				566B6B171FCFA899003E0CA7 /* ArrayExtensions.swift in Sources */,
 				566B6AF01FCFA878003E0CA7 /* UGuessLikeTCell.swift in Sources */,
-				566B6AFF1FCFA878003E0CA7 /* UBookViewController.swift in Sources */,
 				566B6AE61FCFA878003E0CA7 /* UComicHead.swift in Sources */,
 				566B6AEE1FCFA878003E0CA7 /* UComicTCell.swift in Sources */,
 				566B6B1B1FCFA899003E0CA7 /* UIBarButtonItemExtension.swift in Sources */,
 				566B6AEA1FCFA878003E0CA7 /* UCommentTCell.swift in Sources */,
 				566B6AFD1FCFA878003E0CA7 /* UMineViewController.swift in Sources */,
 				566B6B0A1FCFA878003E0CA7 /* UNavigationController.swift in Sources */,
-				566B6AD91FCFA878003E0CA7 /* USubscibeListViewController.swift in Sources */,
 				566B6A7F1FCFA686003E0CA7 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				566B6AD81FCFA878003E0CA7 /* USpecialTCell.swift in Sources */,
 				566B6AE31FCFA878003E0CA7 /* USearchViewController.swift in Sources */,
@@ -747,7 +730,6 @@
 				566B6B0B1FCFA878003E0CA7 /* UWebViewController.swift in Sources */,
 				566B6AD41FCFA878003E0CA7 /* UComicCFoot.swift in Sources */,
 				566B6AEB1FCFA878003E0CA7 /* UReadTopBar.swift in Sources */,
-				566B6ADA1FCFA878003E0CA7 /* UVIPListViewController.swift in Sources */,
 				566B6B071FCFA878003E0CA7 /* UPageViewController.swift in Sources */,
 				566B6A781FCFA686003E0CA7 /* UCollectionViewAlignedLayout.swift in Sources */,
 				566B6B1C1FCFA899003E0CA7 /* UIDeviceExtension.swift in Sources */,
@@ -766,7 +748,6 @@
 				566B6B1F1FCFA899003E0CA7 /* StringExtension.swift in Sources */,
 				566B6AF31FCFA878003E0CA7 /* UOtherWorksViewController.swift in Sources */,
 				566B6B001FCFA878003E0CA7 /* UDocumentListViewController.swift in Sources */,
-				566B6AFE1FCFA878003E0CA7 /* UCollectListViewController.swift in Sources */,
 				566B6AE71FCFA878003E0CA7 /* UTicketTCell.swift in Sources */,
 				566B6B081FCFA878003E0CA7 /* UBaseViewController.swift in Sources */,
 				566B6AF51FCFA878003E0CA7 /* UComicListViewController.swift in Sources */,
@@ -783,7 +764,6 @@
 				566B6AEF1FCFA878003E0CA7 /* UReadBottomBar.swift in Sources */,
 				566B6AE01FCFA878003E0CA7 /* UGlobal.swift in Sources */,
 				566B6AD51FCFA878003E0CA7 /* UComicCCell.swift in Sources */,
-				566B6B011FCFA878003E0CA7 /* UDownloadListViewController.swift in Sources */,
 				566B6A801FCFA686003E0CA7 /* ParallaxHeader.swift in Sources */,
 				566B6A7D1FCFA686003E0CA7 /* ConstraintArrayDSL.swift in Sources */,
 				566B6ADF1FCFA878003E0CA7 /* URankListViewController.swift in Sources */,

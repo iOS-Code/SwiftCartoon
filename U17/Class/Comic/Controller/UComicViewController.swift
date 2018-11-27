@@ -19,6 +19,7 @@ class UComicViewController: UBaseViewController {
     private lazy var mainScrollView: UIScrollView = {
         let sw = UIScrollView()
         sw.delegate = self
+        sw.isScrollEnabled = false
         return sw
     }()
     
@@ -44,11 +45,11 @@ class UComicViewController: UBaseViewController {
         return cc
     }()
     
-    private lazy var pageVC: UPageViewController = {
-        return UPageViewController(titles: ["详情", "目录", "评论"],
-                                   vcs: [detailVC, chapterVC, commentVC],
-                                   pageStyle: .topTabBar)
-    }()
+//    private lazy var pageVC: UPageViewController = {
+//        return UPageViewController(titles: ["详情", "目录", "评论"],
+//                                   vcs: [detailVC, chapterVC, commentVC],
+//                                   pageStyle: .topTabBar)
+//    }()
     
     private lazy var headView: UComicHead = {
         return UComicHead(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: navigationBarY + 150))
@@ -140,9 +141,9 @@ class UComicViewController: UBaseViewController {
             $0.height.equalToSuperview().offset(-navigationBarY)
         }
 
-        addChildViewController(pageVC)
-        contentView.addSubview(pageVC.view)
-        pageVC.view.snp.makeConstraints { $0.edges.equalToSuperview() }
+//        addChildViewController(pageVC)
+//        contentView.addSubview(pageVC.view)
+//        pageVC.view.snp.makeConstraints { $0.edges.equalToSuperview() }
 
         mainScrollView.parallaxHeader.view = headView
         mainScrollView.parallaxHeader.height = navigationBarY + 150

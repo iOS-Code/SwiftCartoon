@@ -17,12 +17,8 @@ class UTabBarController: UITabBarController {
         
         /// 首页
         let onePageVC = UHomeViewController(titles: ["推荐",
-                                                     "VIP",
-                                                     "订阅",
                                                      "排行"],
                                             vcs: [UBoutiqueListViewController(),
-                                                  UVIPListViewController(),
-                                                  USubscibeListViewController(),
                                                   URankListViewController()],
                                             pageStyle: .navgationBarSegment)
         addChildViewController(onePageVC,
@@ -40,18 +36,11 @@ class UTabBarController: UITabBarController {
         
         
         /// 书架
-        let bookVC = UBookViewController(titles: ["收藏",
-                                                  "书单",
-                                                  "下载"],
-                                         vcs: [UCollectListViewController(),
-                                               UDocumentListViewController(),
-                                               UDownloadListViewController()],
-                                         pageStyle: .navgationBarSegment)
+        let bookVC = UDocumentListViewController()
         addChildViewController(bookVC,
                                title: "书架",
                                image: UIImage(named: "tab_book"),
                                selectedImage: UIImage(named: "tab_book_S"))
-        
         
         /// 我的
         let mineVC = UMineViewController()

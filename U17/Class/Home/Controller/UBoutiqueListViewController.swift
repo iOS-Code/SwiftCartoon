@@ -70,8 +70,8 @@ class UBoutiqueListViewController: UBaseViewController {
     private func checkLocalData() -> Void {
         // 读取本地缓存
         let loginType: Bool = UserDefaults.standard.bool(forKey: "loginType")
-        if loginType {
-            self.present(UNavigationController(rootViewController: ULoginViewController.getVC()), animated: true) { }
+        if loginType == false {
+//            self.present(UNavigationController(rootViewController: ULoginViewController.getVC()), animated: true) { }
         }
     }
     
@@ -101,6 +101,15 @@ class UBoutiqueListViewController: UBaseViewController {
             self?.galleryItems = returnData?.galleryItems ?? []
             self?.TextItems = returnData?.textItems ?? []
             self?.comicLists = returnData?.comicLists ?? []
+            
+            // 过滤某个类型的数据
+            var tmpArray: [ComicListModel] = []
+            for item:ComicListModel in self!.comicLists {
+                if item.comicType != UComicType.billboard {
+                    tmpArray.append(item)
+                }
+            }
+            self?.comicLists = tmpArray
             
             self?.sexTypeButton.setImage(UIImage(named: self?.sexType == 1 ? "gender_male" : "gender_female"),
                                          for: .normal)
@@ -187,7 +196,6 @@ extension UBoutiqueListViewController: UCollectionViewSectionBackgroundLayoutDel
             return foot
         }
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let comicList = comicLists[section]
