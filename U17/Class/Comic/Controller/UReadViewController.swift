@@ -214,7 +214,7 @@ class UReadViewController: UBaseViewController {
     }
     
     override var prefersStatusBarHidden: Bool {
-        return isIphoneX ? false : true
+        return isIPHONEX ? false : true
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

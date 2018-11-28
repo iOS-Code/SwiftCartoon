@@ -30,7 +30,7 @@ class ULoginViewController: UIViewController {
         let number2 = self.passwordTextField.text!.count
         
         if number1>0 && number2>0 {
-            self.button.backgroundColor = UIColor(r: 104, g: 168, b: 229)
+            self.button.backgroundColor = UIColor.secondTheme
             self.button.setTitleColor(UIColor.white, for: UIControlState.normal)
         } else {
             self.button.backgroundColor = UIColor(r: 236, g: 236, b: 236)

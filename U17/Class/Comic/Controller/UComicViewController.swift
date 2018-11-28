@@ -7,6 +7,7 @@
 //  漫画详情页 漫画分类页点击漫画进入
 
 import UIKit
+import MBProgressHUD
 
 protocol UComicViewWillEndDraggingDelegate: class {
     func comicWillEndDragging(_ scrollView: UIScrollView)
@@ -51,6 +52,16 @@ class UComicViewController: UBaseViewController {
 //                                   pageStyle: .topTabBar)
 //    }()
     
+    private lazy var collectionBtn: UIButton = {
+        let bt = UIButton(frame:.zero)
+        bt.setBackgroundImage(UIImage.init(named: "nav_bg"), for: UIControlState.normal)
+        bt.adjustsImageWhenHighlighted = true
+        bt.setTitle("收藏", for: UIControlState.normal)
+        bt.setTitle("已收藏", for: UIControlState.selected)
+        bt.addTarget(self, action: #selector(collectionButtonAction), for: UIControl.Event.touchUpInside)
+        return bt
+    }()
+    
     private lazy var headView: UComicHead = {
         return UComicHead(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: navigationBarY + 150))
     }()
@@ -76,6 +87,13 @@ class UComicViewController: UBaseViewController {
         loadData()
     }
     
+    private func showTips(_ name : String) {
+        let tips:MBProgressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
+        tips.mode = MBProgressHUDMode.text
+        tips.label.text = name
+        tips.removeFromSuperViewOnHide = true
+        tips.hide(animated: true, afterDelay: 2)
+    }
     
     private func loadData() {
         
@@ -140,21 +158,95 @@ class UComicViewController: UBaseViewController {
             $0.width.equalToSuperview()
             $0.height.equalToSuperview().offset(-navigationBarY)
         }
-
-//        addChildViewController(pageVC)
-//        contentView.addSubview(pageVC.view)
-//        pageVC.view.snp.makeConstraints { $0.edges.equalToSuperview() }
-
+        
         mainScrollView.parallaxHeader.view = headView
         mainScrollView.parallaxHeader.height = navigationBarY + 150
         mainScrollView.parallaxHeader.minimumHeight = navigationBarY
         mainScrollView.parallaxHeader.mode = .fill
+        
+        let bottomConstant = isIPHONEX ? 34.0 : 0.0
+        view.addSubview(collectionBtn)
+        collectionBtn.snp.makeConstraints {
+            $0.left.right.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(0-bottomConstant)
+            $0.height.equalTo(44)
+        }
+        
+        // 获取本地数据 判断是否收藏
+        self.requestLocalData()
     }
     
     override func configNavigationBar() {
         super.configNavigationBar()
         navigationController?.barStyle(.clear)
         mainScrollView.contentOffset = CGPoint(x: 0, y: -mainScrollView.parallaxHeader.height)
+    }
+    
+    @objc private func collectionButtonAction(sender: UIButton) {
+        
+        collectionBtn.isSelected = !collectionBtn.isSelected;
+        if collectionBtn.isSelected == true {
+            self.checkLocalData(false)//收藏
+        } else {
+            self.checkLocalData(true)//取消收藏
+        }
+    }
+}
+
+extension UComicViewController {
+    
+    // 检查本地缓存
+    private func checkLocalData(_ isCalcel: Bool) {
+        if isCalcel == true {
+            // 取消收藏
+            let currentID: Int = self.comicid
+            
+            var localDic = UserDefaults.standard.dictionary(forKey: "CollectionData")
+            if localDic?.keys.count ?? 0 > 0 {
+                localDic?.removeValue(forKey: currentID.description)
+                UserDefaults.standard.set(localDic, forKey:"CollectionData")
+            }
+            self.showTips("已取消")
+        } else {
+            // 收藏
+            let currentID: Int = self.comicid
+            let currentName: String = (detailStatic?.comic?.name)!
+            let currentType: Bool = true
+            let currentDic = ["comic_id":currentID, "name":currentName, "type":currentType] as [String : Any]
+            
+            // 更新本地缓存
+            var localDic = UserDefaults.standard.dictionary(forKey: "CollectionData")
+            if localDic?.keys.count ?? 0 > 0 {
+                localDic?.updateValue(currentDic, forKey: currentID.description)
+                UserDefaults.standard.set(localDic, forKey:"CollectionData")
+            } else {
+                localDic = [currentID.description:currentDic]
+                UserDefaults.standard.set(localDic, forKey:"CollectionData")
+            }
+            self.showTips("已收藏")
+        }
+        
+        //通知界面更新数据
+        NotificationCenter.default.post(name: .UCollectionDataDidChange, object: nil)
+    }
+    
+    
+    // 读取本地缓存
+    private func requestLocalData() {
+        let currentID: Int = self.comicid
+        let localDic: [String : Any] = UserDefaults.standard.dictionary(forKey: "CollectionData") ?? [" ":" "]
+        
+        if localDic.keys.contains(currentID.description) {
+            let currentDic:[String : Any] = localDic[currentID.description] as! [String : Any]
+            if currentDic.keys.count > 0 {
+                let currentType: Bool = currentDic["type"] as! Bool
+                collectionBtn.isSelected = currentType
+            } else {
+                collectionBtn.isSelected = false
+            }
+        } else {
+            collectionBtn.isSelected = false
+        }
     }
 }
 

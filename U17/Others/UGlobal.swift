@@ -20,6 +20,10 @@ extension UIColor {
     class var theme: UIColor {
         return UIColor(r: 29, g: 221, b: 43)
     }
+    
+    class var secondTheme: UIColor {
+        return UIColor(r: 104, g: 168, b: 229)
+    }
 }
 
 extension String {
@@ -29,6 +33,7 @@ extension String {
 
 extension NSNotification.Name {
     static let USexTypeDidChange = NSNotification.Name("USexTypeDidChange")
+    static let UCollectionDataDidChange = NSNotification.Name("UCollectionDataDidChange")
 }
 
 let screenWidth = UIScreen.main.bounds.width
@@ -43,10 +48,8 @@ var topVC: UIViewController? {
     return resultVC
 }
 
-var isIphoneX: Bool {
-    return UI_USER_INTERFACE_IDIOM() == .phone
-        && (max(UIScreen.main.bounds.height, UIScreen.main.bounds.width) == 812
-        || max(UIScreen.main.bounds.height, UIScreen.main.bounds.width) == 896)
+var isIPHONEX: Bool {
+    return UIApplication.shared.statusBarFrame.height > 20.0
 }
 
 private  func _topVC(_ vc: UIViewController?) -> UIViewController? {
